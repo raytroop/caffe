@@ -207,8 +207,7 @@ ifeq ($(USE_OPENCV), 1)
 		ifeq ($(USE_PKG_CONFIG), 1)
 			INCLUDE_DIRS += $(shell pkg-config opencv4 --cflags-only-I | sed 's/-I//g')
 		else
-			INCLUDE_DIRS += /usr/include/opencv4 /usr/local/include/opencv4
-			INCLUDE_DIRS += /usr/include/opencv4/opencv /usr/local/include/opencv4/opencv
+			INCLUDE_DIRS += /usr/local/include/opencv4
 		endif
 	endif
 
